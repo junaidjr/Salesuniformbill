@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <!-- Add more table headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${productList}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.name}"></td>
+                <td th:text="${product.description}"></td>
+                <!-- Add more table cells as needed -->
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Add navigation links or buttons to create, edit, or delete products -->
+</body>
+</html>
